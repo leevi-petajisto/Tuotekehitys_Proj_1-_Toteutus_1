@@ -1,4 +1,126 @@
 * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+  }
+
+/* BODY GRID (footer alas) */
+ .home-page {
+  background-color: rgb(143, 186, 190);
+  min-height: 100vh;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+ } 
+
+/* NAVBAR */
+nav {
+display: flex;
+align-items: center;
+justify-content: space-between;
+background-color: rgb(13, 52, 69);
+padding: 10px 20px;
+}
+
+nav ul {
+display: flex;
+gap: 15px;
+list-style: none;
+}
+
+nav a {
+color: white;
+text-decoration: none;
+padding: 10px;
+}
+
+nav a:hover {
+background-color: rgb(65, 112, 94);
+border-radius: 5px;
+}
+
+.logo {
+max-width: 80px;
+border-radius: 50%;
+}
+
+/* HERO (YLÄOSA) */
+.hero {
+background: rgb(143, 186, 190);
+text-align: center;
+padding: 30px 10px;
+color: white;
+}
+
+.hero img {
+max-width: 300px;
+margin-top: 20px;
+}
+
+/* CONTENT GRID */
+.content {
+display: grid;
+grid-template-columns: 1fr 1fr 250px;
+gap: 20px;
+padding: 40px;
+background: rgb(13, 52, 69);
+border-radius: 10px;
+}
+
+/* SARAKKEET */
+.left,
+.middle {
+background: rgb(143, 186, 190);
+padding: 20px;
+border-radius: 10px;
+}
+
+.right {
+display: flex;
+flex-direction: column;
+gap: 15px;
+}
+
+/* KORTIT */
+.card {
+background: rgb(143, 186, 190);
+padding: 20px;
+text-align: center;
+border-radius: 10px;
+cursor: pointer;
+transition: 0.3s;
+}
+
+.card:hover {
+background: rgb(92, 156, 177);
+color: white;
+}
+
+/* FOOTER */
+footer {
+background: rgb(200, 40, 40);
+display: flex;
+justify-content: space-around;
+padding: 20px;
+color: white;
+}
+
+
+/* RESPONSIIVISUUS */
+@media (max-width: 800px) {
+.content {
+grid-template-columns: 1fr;
+}
+
+nav ul {
+flex-wrap: wrap;
+justify-content: center;
+}
+}
+
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -271,9 +393,9 @@ tfoot {
 }
 
 main {
-    max-width: 900px;
-    margin: 40px auto;
-    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0;
 }
 
 main section {
