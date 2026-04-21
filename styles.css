@@ -1,0 +1,376 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter',sans-serif;
+}
+.hinnasto {
+  margin: 0;
+  background: rgb(92, 156, 177);
+  color: #fff;
+  font-family: 'Inter', sans-serif;
+
+
+/* grid */
+.hinnoittelu {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 60px;
+}
+
+/* kortit */
+.kortti {
+  background: rgb(13, 52, 69);
+  border-radius: 20px;
+  padding: 30px;
+  border: 1px solid #2a2a2d;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  transition: 0.3s;
+
+
+  &:hover {
+  transform: translateY(-5px);
+  border-color: #3a3a3f;
+  }
+}
+/* tekstit */
+.hinta {
+  font-size: 40px;
+  font-weight: 600;
+
+
+& span {
+  font-size: 14px;
+  color: #aaa;
+}
+}
+.kuvaus {
+  color: #bbb;
+}
+
+/* napit */
+.nappi {
+  margin-top: auto;
+  padding: 12px;
+  border-radius: 999px;
+  border: none;
+  background: rgb(65, 112, 94);
+  color: white;
+  cursor: pointer;
+}
+}
+
+nav ul {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex: 1;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: rgb(13, 52, 69);
+}
+
+nav ul li {
+  position: relative;
+  margin: 0 10px;
+  list-style: none;
+  display: inline-block;
+  cursor: pointer;
+}
+
+nav ul li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 10px;
+  text-decoration: none;
+}
+
+nav ul li a:hover {
+  background-color: rgb(65, 112, 94);
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 17px;
+    text-align: center;
+    background-color: rgb(13, 52, 69);
+}
+
+nav .logo{
+    display: flex;
+    max-width: 100px;
+    height: auto;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-top: 6px;
+    /* margin-bottom: 4px;
+    Jos ylä ja alamarginaalin asettais 4px niin
+    logo ei olis kiinni ala reunassa? Olisko ok? */
+}
+
+footer {
+  /* position: fixed;
+  bottom: 0; */  
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 17px;
+  text-align: center;
+  color: white;
+  background-color: rgb(13, 52, 69);
+}
+
+footer ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  list-style-type: none;
+  overflow: hidden;
+}
+
+footer ul li {
+  position: relative;
+  margin: 0 20px;
+}
+
+footer .logo{
+    display: flex;
+    max-width: 80px;
+    height: auto;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-top: 6px;
+}
+
+
+@media (max-width: 700px) {
+    nav .logo, 
+    footer .logo{
+        display: flex;
+        max-width: 50px;
+        height: auto;
+        border-radius: 50%;
+        overflow: hidden;
+        margin-top: 6px;
+    /* margin-bottom: 4px;
+    Jos ylä ja alamarginaalin asettais 4px niin
+    logo ei olis kiinni ala reunassa? Olisko ok? */
+    }
+  }
+
+ .home-page {
+  min-height: 100vh;
+  margin: 0;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+ } 
+ 
+.faq{
+  background-color: rgb(143, 186, 190);
+  .otsikko {
+    text-align: center;
+
+  } 
+  
+  p {
+    text-align: center;
+  }
+
+  caption {
+  padding: 1em;
+  caption-side: top;
+  letter-spacing: 1px;
+  color: black;
+}
+  table {
+    table-layout: fixed;
+    width: 35%;
+    margin: 10px auto;
+    padding: 1rem;
+    border-radius: 3rem;
+    color: whitesmoke;
+    background-clip: content-box;
+    box-shadow: inset 0 0 0 20px;
+    border-spacing: 0;
+    border-collapse: separate;
+    border-radius: 2rem;
+    border: 1px solid black;
+}
+
+
+table tr:first-child th:first-child {
+  border-top-left-radius: 1rem;
+}
+
+table tr:first-child th:last-child {
+  border-top-right-radius: 1rem;
+}
+
+table tr:last-child th:first-child {
+  border-bottom-left-radius: 1rem;
+}
+
+table tr:last-child th:last-child {
+  border-bottom-right-radius: 1rem;
+}
+
+tbody tr:nth-child(odd) {
+  background-color: rgb(65, 112, 94);
+}
+
+tbody tr:nth-child(even) {
+  background-color: rgb(13, 52, 69);
+}
+
+th,
+td {
+  padding: 1em;
+}
+tr:nth-child(2),
+tr:nth-child() {
+    text-align: right;
+    width: 25%;
+}
+tr:nth-child(1),
+tr:nth-child() {
+    text-align: left;
+    width: 30%;
+}
+
+tfoot tr :nth-child(1) {
+    text-align: right;
+}
+
+tfoot tr :nth-child(2) {
+    text-align: left;
+}
+
+
+th,
+td {
+  vertical-align: top;
+  padding: 0.3em;
+}
+
+tfoot {
+  border-top: 1px solid #999999;
+}
+
+}
+
+main {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+main section {
+    margin-bottom: 25px;
+}
+
+.info{
+  background-color: rgb(143, 186, 190);
+  .otsikko {
+    text-align: center;
+  }}
+
+
+.lomake {
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  margin: 0;
+  background: rgb(92, 156, 177);
+  color: #fff;
+  font-family: 'Inter', sans-serif;
+  
+.tilauslomake {
+  gap: 20px;
+  padding: 60px;
+}
+
+.kortti {
+  background: rgb(13, 52, 69);
+  border-radius: 20px;
+  padding: 30px;
+  border: 1px solid #2a2a2d;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  transition: 0.3s;
+  border-color: #3a3a3f;
+  }
+
+
+.listtyle {
+  list-style: none;
+  margin: 40px;
+
+}
+.listtitle {
+  font-size: 40px;
+  margin-left: 50px;
+}
+
+.forminfo {
+  font-size: 20px;
+  margin-left: 50px;
+  margin-top: 20px;
+  width: 500px;
+}
+
+.listname {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  text-align: right;
+  font-size: 20px;
+  font-weight: 600;
+  margin: 10px;
+
+& span {
+  font-size: 14px;
+  color: #aaa;
+}
+}
+
+.nappi {
+  font-size: 20px;
+  font-weight: 600;
+  margin-top: 30px;
+  margin-left: 10px;
+  padding: 12px;
+  border-radius: 999px;
+  border: none;
+  background: rgb(65, 112, 94);
+  color: white;
+  cursor: pointer;
+  width: 500px;
+  height: 60px;
+}
+
+.input {
+  flex: 0 0 200px;
+  margin-left: 10px;
+  margin-top: auto;
+  padding: 10px;
+  border-radius: 999px;
+  width: 500px;
+  border: none;
+  background: white;
+  color: black;
+  cursor: pointer;
+}
+}
